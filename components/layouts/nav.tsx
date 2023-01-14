@@ -3,7 +3,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 
 const Nav = () => {
   return (
-    <div className="border-b sticky top-0 shadow">
+    <div className="border-b sticky top-0 shadow bg-white z-50">
       <div className="flex justify-between items-center container mx-auto">
         <div className="py-6">
           <Image
