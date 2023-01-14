@@ -7,11 +7,38 @@ import CategoryCard from "../components/pages/Home/categoryCard";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const categoryCard = {
-    title: "Man's Cloths",
-    link: "",
-    imagesUrl: ["/assets/img/image1.jpg", "/assets/img/image2.jpg"],
-  };
+  const ccategoryCardList = [
+    {
+      title: "shoes",
+      link: "",
+      imagesUrl: ["/assets/img/image1.jpg", "/assets/img/image2.jpg"],
+    },
+    {
+      title: "Men's outware",
+      link: "",
+      imagesUrl: ["/assets/img/image1.jpg", "/assets/img/image2.jpg"],
+    },
+    {
+      title: "Women's hats",
+      link: "",
+      imagesUrl: ["/assets/img/image1.jpg", "/assets/img/image2.jpg"],
+    },
+    {
+      title: "Men's Cloths",
+      link: "",
+      imagesUrl: ["/assets/img/image1.jpg", "/assets/img/image2.jpg"],
+    },
+    {
+      title: "women's Cloths",
+      link: "",
+      imagesUrl: ["/assets/img/image1.jpg", "/assets/img/image2.jpg"],
+    },
+    {
+      title: "Men's bags",
+      link: "",
+      imagesUrl: ["/assets/img/image1.jpg", "/assets/img/image2.jpg"],
+    },
+  ];
   return (
     <>
       <Head>
@@ -21,9 +48,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <div>
-        <div>
-          <CategoryCard {...categoryCard} />
+      <div className="md:flex my-6 md:gap-6">
+        <div className="basis-3/12 bg-slate-200">Categories</div>
+        <div className="flex justify-between flex-wrap gap-7 mt-6 sm:mt-0 basis-9/12">
+          {ccategoryCardList.map((item, index) => (
+            <CategoryCard key={index} {...item} />
+          ))}
         </div>
       </div>
     </>

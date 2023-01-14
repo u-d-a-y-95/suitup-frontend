@@ -3,8 +3,8 @@ import { FC } from "react";
 interface IImageCard {
   frontImage: string;
   backImage: string;
-  width?: number;
-  height?: number;
+  width: string;
+  height: string;
 }
 
 const ImageCard: FC<IImageCard> = ({
@@ -18,7 +18,7 @@ const ImageCard: FC<IImageCard> = ({
     width,
     height,
     backgroundPosition: "center",
-    backgroundSize: `${width}px ${height}px`,
+    backgroundSize: `${width} ${height}`,
   });
 
   return (
